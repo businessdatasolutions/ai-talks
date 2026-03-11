@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Spiegel — AI-talk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-light: #2d5a8e;
+      --primary-dark: #152a45;
+      --primary-50: #f0f5fa;
+      --primary-100: #dae5f2;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-800: #1e293b;
+      --text: #1a202c;
+      --success: #16a34a;
+      --warning: #d97706;
+      --danger: #dc2626;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: #fff;
+      color: var(--text);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .slide {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      padding: 60px 80px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .slide.active { display: flex; }
+
+    .slide.hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+      color: #fff;
+    }
+
+    .slide.hero .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.08);
+    }
+    .slide.hero .decorative-circle:nth-child(1) { width: 400px; height: 400px; top: -100px; right: -100px; }
+    .slide.hero .decorative-circle:nth-child(2) { width: 300px; height: 300px; bottom: -80px; left: -80px; }
+    .slide.hero .decorative-circle:nth-child(3) { width: 200px; height: 200px; top: 50%; left: 10%; }
+
+    .slide.dark {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .slide.accent {
+      background: var(--primary-50);
+    }
+
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .slide.dark h2,
+    .slide.hero h2 { color: #fff; }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-size: 28px;
+      font-weight: 400;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+
+    .quote {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.5;
+      max-width: 900px;
+      font-style: italic;
+      color: var(--slate-800);
+    }
+
+    .slide.dark .quote,
+    .slide.hero .quote {
+      color: rgba(255,255,255,0.95);
+    }
+
+    .big-number {
+      font-size: 120px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .slide.dark .big-number { color: #fff; }
+
+    .card-grid {
+      display: grid;
+      gap: 32px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: left;
+    }
+
+    .slide.dark .card {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .card-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      color: var(--slate-500);
+    }
+
+    .slide.dark .card-label { color: rgba(255,255,255,0.5); }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .slide.dark .card-title { color: #fff; }
+
+    .card-text {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--slate-500);
+    }
+
+    .slide.dark .card-text { color: rgba(255,255,255,0.7); }
+
+    .badge {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--primary-50);
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .slide.hero .badge {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .step-list {
+      text-align: left;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .step-content h3 {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 20px;
+      color: var(--slate-500);
+      line-height: 1.5;
+    }
+
+    .timeline-bar {
+      display: flex;
+      gap: 4px;
+      width: 100%;
+      max-width: 800px;
+      height: 8px;
+      margin-bottom: 40px;
+    }
+
+    .timeline-bar .seg {
+      flex: 1;
+      border-radius: 4px;
+      background: var(--border);
+      transition: background 0.3s;
+    }
+
+    .timeline-bar .seg.done { background: var(--primary); }
+    .timeline-bar .seg.current { background: var(--primary-light); }
+
+    .progress {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background: var(--primary);
+      transition: width 0.4s ease;
+      z-index: 100;
+    }
+
+    .slide-counter {
+      position: fixed;
+      bottom: 20px;
+      right: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--slate-400);
+      z-index: 100;
+    }
+
+    .slide.dark ~ .slide-counter,
+    .slide.hero ~ .slide-counter { color: rgba(255,255,255,0.4); }
+
+    .nav-hint {
+      position: fixed;
+      bottom: 20px;
+      left: 32px;
+      font-size: 13px;
+      color: var(--slate-400);
+      z-index: 100;
+    }
+
+    .nav-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      color: var(--primary);
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      transition: opacity 0.2s, background 0.15s;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .nav-btn.prev { left: 24px; }
+    .nav-btn.next { right: 24px; }
+
+    .separator {
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      margin: 24px auto;
+    }
+
+    .slide.dark .separator,
+    .slide.hero .separator { background: rgba(255,255,255,0.3); }
+
+    .icon-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 32px;
+    }
+
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-item span {
+      font-size: 16px;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .slide.dark .highlight { color: #7db8f0; }
+
+    .comparison {
+      display: flex;
+      align-items: flex-end;
+      gap: 48px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .bar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bar {
+      width: 80px;
+      border-radius: 8px 8px 0 0;
+      background: linear-gradient(180deg, var(--primary-light), var(--primary));
+      transition: height 0.6s ease;
+    }
+
+    .bar-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--slate-800);
+    }
+
+    .bar-value {
+      font-size: 14px;
+      color: var(--slate-500);
+    }
+
+    .full-quote {
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.4;
+      max-width: 1000px;
+      color: var(--primary);
+    }
+
+    .slide.dark .full-quote { color: #fff; }
+
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .sector-card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+
+    .sector-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .sector-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .sector-card p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--slate-500);
+    }
+
+    .sector-card .stat {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--danger);
+      margin-bottom: 4px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide.active > * {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .slide.active > *:nth-child(2) { animation-delay: 0.08s; }
+    .slide.active > *:nth-child(3) { animation-delay: 0.16s; }
+    .slide.active > *:nth-child(4) { animation-delay: 0.24s; }
+    .slide.active > *:nth-child(5) { animation-delay: 0.32s; }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 0: Titelslide -->
+  <div class="slide hero active" id="slide-0">
+    <div class="decorative-circle"></div>
+    <div class="decorative-circle"></div>
+    <div class="decorative-circle"></div>
+    <span class="badge">AI-talk voor Rotary</span>
+    <h1>De Spiegel</h1>
+    <p class="subtitle">Van emotie naar urgentie</p>
+    <div class="separator"></div>
+    <p class="subtitle" style="font-size: 20px; opacity: 0.6;">60 minuten &middot; 5 segmenten</p>
+  </div>
+
+  <!-- SLIDE 1: Opening — vraag -->
+  <div class="slide" id="slide-1">
+    <span class="badge">Segment 1 &mdash; Opening</span>
+    <h2>Wie heeft vandaag al iets<br>met AI gedaan?</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="color: var(--slate-500); max-width: 700px;">Bewust of onbewust?</p>
+  </div>
+
+  <!-- SLIDE 2: Opening — tweede vraag -->
+  <div class="slide" id="slide-2">
+    <span class="badge">Segment 1 &mdash; Opening</span>
+    <h2>En wie heeft een mening gevormd<br>over AI &mdash; zonder het zelf<br>te gebruiken?</h2>
+  </div>
+
+  <!-- SLIDE 3: Drie patronen -->
+  <div class="slide" id="slide-3">
+    <span class="badge">Segment 1 &mdash; Opening</span>
+    <h2>Drie patronen</h2>
+    <div class="card-grid cols-3">
+      <div class="card">
+        <div class="card-label">Patroon 1</div>
+        <div class="card-title">De Ontkenner</div>
+        <div class="card-text">&ldquo;Het stelt niks voor, het hallucineert alleen maar.&rdquo;</div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--slate-400); font-style: italic;">Angst vermomd als rationaliteit</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Patroon 2</div>
+        <div class="card-title">De Gelovige</div>
+        <div class="card-text">&ldquo;AI gaat alles oplossen.&rdquo;</div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--slate-400); font-style: italic;">Hoop vermomd als analyse</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Patroon 3</div>
+        <div class="card-title">De Parallelist</div>
+        <div class="card-text">&ldquo;Het is een tool, net als Excel.&rdquo;</div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--slate-400); font-style: italic;">Comfort vermomd als nuance</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: Brug naar stellingen -->
+  <div class="slide dark" id="slide-4">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">Segment 2 &mdash; Experiment</span>
+    <h2>Tijd om positie<br>te kiezen</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="max-width: 700px;">Links = Eens &nbsp;&middot;&nbsp; Rechts = Oneens</p>
+    <p style="margin-top: 40px; font-size: 20px; opacity: 0.6;">Sta op. Er is geen middenweg.</p>
+  </div>
+
+  <!-- SLIDE 5: AI Attitudes tool -->
+  <div class="slide" id="slide-5" style="padding: 40px;">
+    <iframe
+      src="https://businessdatasolutions.github.io/ai-attitudes/?count=5"
+      style="width: 100%; height: 100%; border: none; border-radius: 16px;"
+    ></iframe>
+  </div>
+
+  <!-- SLIDE 6: Debriefing -->
+  <div class="slide" id="slide-6">
+    <span class="badge">Segment 2 &mdash; Debriefing</span>
+    <h2>Wat merkte u?</h2>
+    <div class="separator"></div>
+    <div style="text-align: left; max-width: 700px;">
+      <p class="quote" style="font-size: 26px; margin-bottom: 24px;">Was het makkelijk om te kiezen &mdash; of merkte u dat u twijfelde?</p>
+      <p class="quote" style="font-size: 26px; margin-bottom: 24px;">Veranderde uw positie toen u de andere kant hoorde?</p>
+      <p class="quote" style="font-size: 26px;">Was uw keuze puur rationeel &mdash; of zat er gevoel in?</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: Anthropomorfisme les -->
+  <div class="slide dark" id="slide-7">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">De les</span>
+    <h2 style="font-size: 40px; max-width: 900px;">Ons brein is geprogrammeerd om intentie en bewustzijn te zien &mdash; ook waar die er niet is.</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="max-width: 700px; font-size: 22px;">Wij zien gezichten in wolken. Verdriet in een melodie. En &lsquo;iemand die begrijpt&rsquo; in een taalmodel dat patronen herkent.</p>
+  </div>
+
+  <!-- SLIDE 8: Wat AI wel is -->
+  <div class="slide" id="slide-8">
+    <span class="badge">Segment 3 &mdash; Wat AI is</span>
+    <h2>Patroonherkenner<br>op industri&euml;le schaal</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="color: var(--slate-500); max-width: 800px;">Het heeft miljarden teksten gelezen en geleerd welke woorden op welke woorden volgen. Het voorspelt. Het imiteert. Het is daar buitengewoon goed in.</p>
+  </div>
+
+  <!-- SLIDE 9: Wat AI niet is -->
+  <div class="slide accent" id="slide-9">
+    <span class="badge">Segment 3 &mdash; Wat AI niet is</span>
+    <h2>Het begrijpt niet.<br>Het gelooft niet.<br>Het heeft geen intentie.</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="color: var(--slate-500); max-width: 800px; font-size: 22px;">Als ChatGPT schrijft &lsquo;ik vind dit een interessante vraag&rsquo; &mdash; dan is dat geen mening. Dat is een patroon.</p>
+  </div>
+
+  <!-- SLIDE 10: Snelheidsklap -->
+  <div class="slide" id="slide-10">
+    <span class="badge">Segment 3 &mdash; Snelheid</span>
+    <h2 style="margin-bottom: 40px;">Tijd tot 50 miljoen gebruikers</h2>
+    <div class="comparison">
+      <div class="bar-item">
+        <div class="bar-value">38 jaar</div>
+        <div class="bar" style="height: 300px; opacity: 0.3;"></div>
+        <div class="bar-label">Radio</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-value">10 jaar</div>
+        <div class="bar" style="height: 80px; opacity: 0.5;"></div>
+        <div class="bar-label">Internet</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-value">5 dagen</div>
+        <div class="bar" style="height: 12px;"></div>
+        <div class="bar-label">ChatGPT</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: Draghi video intro -->
+  <div class="slide dark" id="slide-11">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">Segment 4 &mdash; Draghi</span>
+    <p class="subtitle" style="margin-bottom: 32px; font-size: 22px; opacity: 0.7;">Mario Draghi in eigen woorden</p>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/MCBdcNA_FsI?start=40&end=104&rel=0"
+        title="Draghi over Europese concurrentiekracht"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: 800 miljard -->
+  <div class="slide" id="slide-12">
+    <span class="badge">Segment 4 &mdash; De harde feiten</span>
+    <p style="font-size: 20px; color: var(--slate-500); margin-bottom: 8px;">Investeringstekort per jaar t.o.v. VS en China</p>
+    <div class="big-number">&euro;800 mrd</div>
+    <div class="separator"></div>
+    <p class="subtitle" style="color: var(--slate-500); max-width: 700px; font-size: 22px;">Europa moet 5% van zijn bbp extra investeren. Het Marshall Plan was 1&ndash;2%.</p>
+  </div>
+
+  <!-- SLIDE 13: Drie kernproblemen Draghi -->
+  <div class="slide" id="slide-13">
+    <span class="badge">Segment 4 &mdash; Kernproblemen</span>
+    <h2 style="margin-bottom: 36px;">Drie kernproblemen</h2>
+    <div class="card-grid cols-3">
+      <div class="card" style="border-top: 4px solid var(--danger);">
+        <div class="card-title" style="color: var(--danger);">Productiviteitskloof</div>
+        <div class="card-text">Europese bedrijven zijn de afgelopen 20 jaar relatief minder productief geworden.</div>
+      </div>
+      <div class="card" style="border-top: 4px solid var(--warning);">
+        <div class="card-title" style="color: var(--warning);">Schaalprobleem</div>
+        <div class="card-text">De 10 grootste digitale bedrijven zijn Amerikaans of Chinees. Niet &eacute;&eacute;n Europees.</div>
+      </div>
+      <div class="card" style="border-top: 4px solid var(--primary);">
+        <div class="card-title">Fragmentatie</div>
+        <div class="card-text">27 landen, 27 regelgevingen, 27 datastrategieën. Onze concurrenten: &eacute;&eacute;n markt.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: Nederland specifiek -->
+  <div class="slide" id="slide-14">
+    <span class="badge">Segment 4 &mdash; Nederland</span>
+    <h2 style="margin-bottom: 36px;">Drie sectoren onder druk</h2>
+    <div class="sector-grid">
+      <div class="sector-card">
+        <div class="sector-icon">🚢</div>
+        <h3>Logistiek</h3>
+        <div class="stat">14M containers</div>
+        <p>Rotterdam plant nog handmatig. Chinese havens draaien op AI. Dit is geen toekomst &mdash; dit is nu.</p>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon">🏥</div>
+        <h3>Zorg</h3>
+        <div class="stat">-100.000</div>
+        <p>Tekort zorgmedewerkers in 2030. AI-ondersteunde diagnostiek en planning zijn overlevingsvoorwaarden.</p>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon">⚙️</div>
+        <h3>Maakindustrie</h3>
+        <div class="stat">10.000 MKB</div>
+        <p>ASML begrijpt het. De vraag is of de toeleveranciers rondom Brainport het ook begrijpen.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: Interactief moment -->
+  <div class="slide accent" id="slide-15">
+    <span class="badge">Segment 4 &mdash; Reflectie</span>
+    <h2 style="font-size: 36px; max-width: 800px;">In hoeveel procent van de beslissingen in uw organisatie speelt AI een rol?</h2>
+    <div class="separator"></div>
+    <p class="subtitle" style="color: var(--slate-500); max-width: 700px; font-size: 24px; margin-top: 20px;">En in hoeveel procent <span class="highlight">zou dat kunnen</span>?</p>
+    <p style="margin-top: 32px; font-size: 20px; color: var(--slate-400);">Dat gat is het Draghi-rapport in uw eigen organisatie.</p>
+  </div>
+
+  <!-- SLIDE 16: Centrale vraag -->
+  <div class="slide dark" id="slide-16">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">Segment 5 &mdash; Call to Action</span>
+    <p class="full-quote" style="font-size: 38px;">Welk besluit in mijn organisatie zou <span style="color: #7db8f0;">10 keer beter</span> worden als ik de juiste informatie op het juiste moment had?</p>
+  </div>
+
+  <!-- SLIDE 17: Drie stappen -->
+  <div class="slide" id="slide-17">
+    <span class="badge">Segment 5 &mdash; Drie stappen</span>
+    <h2 style="margin-bottom: 40px;">Drie stappen</h2>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Vanavond</h3>
+          <p>Ga naar claude.ai of chatgpt.com. Stel &eacute;&eacute;n vraag die u normaal aan een collega zou stellen.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Deze week</h3>
+          <p>Deel wat u ervoer met &eacute;&eacute;n persoon in uw netwerk. Niet als expert. Als nieuwsgierige.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Deze maand</h3>
+          <p>Identificeer &eacute;&eacute;n besluit in uw organisatie waarbij betere informatie het verschil maakt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: Afsluiting -->
+  <div class="slide hero" id="slide-18">
+    <div class="decorative-circle"></div>
+    <div class="decorative-circle"></div>
+    <div class="decorative-circle"></div>
+    <h2 style="font-size: 40px; max-width: 900px;">De vraag is niet of AI uw sector gaat veranderen.</h2>
+    <div class="separator"></div>
+    <p class="full-quote" style="color: rgba(255,255,255,0.95); font-size: 44px; max-width: 900px;">De vraag is of u degene bent die stuurt &mdash; of degene die wordt gestuurd.</p>
+    <p style="margin-top: 48px; font-size: 22px; opacity: 0.5;">Dank u wel.</p>
+  </div>
+
+  <!-- Navigation buttons (fallback for iframe slides) -->
+  <button class="nav-btn prev" id="btn-prev" aria-label="Vorige slide">&#8592;</button>
+  <button class="nav-btn next" id="btn-next" aria-label="Volgende slide">&#8594;</button>
+
+  <!-- Progress bar -->
+  <div class="progress" id="progress"></div>
+  <div class="slide-counter" id="counter"></div>
+  <div class="nav-hint" id="nav-hint">&#8592; &#8594; pijltjestoetsen</div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+    const total = slides.length;
+
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+
+    function hasIframe(slideEl) {
+      return slideEl.querySelector('iframe') !== null;
+    }
+
+    function showSlide(n) {
+      slides[current].classList.remove('active');
+      current = Math.max(0, Math.min(n, total - 1));
+      slides[current].classList.add('active');
+
+      // Return focus to body so keyboard navigation works again
+      if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        document.activeElement.blur();
+      }
+      document.body.focus();
+
+      const progress = document.getElementById('progress');
+      progress.style.width = ((current / (total - 1)) * 100) + '%';
+
+      const counter = document.getElementById('counter');
+      counter.textContent = (current + 1) + ' / ' + total;
+
+      // Adapt counter/hint color based on slide background
+      const isDark = slides[current].classList.contains('dark') || slides[current].classList.contains('hero');
+      counter.style.color = isDark ? 'rgba(255,255,255,0.4)' : '';
+      document.getElementById('nav-hint').style.color = isDark ? 'rgba(255,255,255,0.3)' : '';
+
+      // Show nav buttons on all slides
+      btnPrev.classList.toggle('visible', current > 0);
+      btnNext.classList.toggle('visible', current < total - 1);
+    }
+
+    // Click nav buttons
+    btnPrev.addEventListener('click', (e) => { e.stopPropagation(); showSlide(current - 1); });
+    btnNext.addEventListener('click', (e) => { e.stopPropagation(); showSlide(current + 1); });
+
+    // Click outside iframe to recapture focus
+    document.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'IFRAME' && !e.target.classList.contains('nav-btn')) {
+        document.body.focus();
+      }
+    });
+
+    // Detect when iframe steals focus and show nav buttons
+    window.addEventListener('blur', () => {
+      if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+        btnPrev.classList.toggle('visible', current > 0);
+        btnNext.classList.toggle('visible', current < total - 1);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        showSlide(current + 1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        showSlide(current - 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        showSlide(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        showSlide(total - 1);
+      }
+    });
+
+    // Touch support for mobile/tablet
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+    document.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? showSlide(current + 1) : showSlide(current - 1);
+      }
+    });
+
+    // Initialize
+    document.body.setAttribute('tabindex', '-1');
+    showSlide(0);
+
+    // Hide nav hint after first navigation
+    document.addEventListener('keydown', () => {
+      document.getElementById('nav-hint').style.opacity = '0';
+    }, { once: true });
+  </script>
+
+</body>
+</html>
