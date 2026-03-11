@@ -480,13 +480,20 @@
     </div>
   </div>
 
-  <!-- SLIDE 7: Anthropomorfisme les + brug -->
+  <!-- SLIDE 7: Anthropomorfisme les + AI-lied -->
   <div class="slide dark" id="slide-7">
     <span class="badge" style="background: rgba(255,255,255,0.15); color: #fff;">De les</span>
     <h2 style="font-size: 40px; max-width: 900px;">Ons brein is geprogrammeerd om intentie en bewustzijn te zien &mdash; ook waar die er niet is.</h2>
     <div class="separator"></div>
     <p class="subtitle" style="max-width: 700px; font-size: 22px;">Wij zien gezichten in wolken. Verdriet in een melodie. En &lsquo;iemand die begrijpt&rsquo; in een taalmodel dat patronen herkent.</p>
-    <p style="margin-top: 40px; font-size: 20px; opacity: 0.6;">Nu we dat weten &mdash; laten we kijken naar de feiten.</p>
+    <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+      <button id="play-lyria" style="display: flex; align-items: center; gap: 12px; padding: 14px 32px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: #fff; font-family: inherit; font-size: 18px; font-weight: 500; cursor: pointer; backdrop-filter: blur(8px); transition: background 0.2s;">
+        <span id="lyria-icon" style="font-size: 22px;">&#9654;</span>
+        <span id="lyria-label">Luister &mdash; dit lied is volledig door AI gemaakt</span>
+      </button>
+      <p style="font-size: 14px; opacity: 0.4;">Le Temps D'Aimer &middot; gegenereerd met <a href="https://deepmind.google/models/lyria/" target="_blank" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Google Lyria</a></p>
+      <audio id="lyria-audio" src="media/Le_Temps_D_aimer.mp4" preload="metadata"></audio>
+    </div>
   </div>
 
   <!-- ============================================ -->
@@ -670,9 +677,9 @@
     const btnNext = document.getElementById('btn-next');
 
     function showSlide(n) {
-      // Pause any playing videos on current slide
-      const currentVideos = slides[current].querySelectorAll('video');
-      currentVideos.forEach(v => { v.pause(); });
+      // Pause any playing videos/audio on current slide
+      const currentMedia = slides[current].querySelectorAll('video, audio');
+      currentMedia.forEach(v => { v.pause(); });
 
       slides[current].classList.remove('active');
       current = Math.max(0, Math.min(n, total - 1));
@@ -743,6 +750,33 @@
       if (Math.abs(diff) > 50) {
         diff > 0 ? showSlide(current + 1) : showSlide(current - 1);
       }
+    });
+
+    // Lyria audio play/pause
+    const lyriaBtn = document.getElementById('play-lyria');
+    const lyriaAudio = document.getElementById('lyria-audio');
+    const lyriaIcon = document.getElementById('lyria-icon');
+    const lyriaLabel = document.getElementById('lyria-label');
+
+    lyriaBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (lyriaAudio.paused) {
+        lyriaAudio.play();
+        lyriaIcon.textContent = '\u275A\u275A';
+        lyriaLabel.textContent = 'Luister \u2014 voelt dit als een machine?';
+        lyriaBtn.style.background = 'rgba(255,255,255,0.18)';
+      } else {
+        lyriaAudio.pause();
+        lyriaIcon.textContent = '\u25B6';
+        lyriaLabel.textContent = 'Luister \u2014 dit lied is volledig door AI gemaakt';
+        lyriaBtn.style.background = 'rgba(255,255,255,0.08)';
+      }
+    });
+
+    lyriaAudio.addEventListener('ended', () => {
+      lyriaIcon.textContent = '\u25B6';
+      lyriaLabel.textContent = 'Luister \u2014 dit lied is volledig door AI gemaakt';
+      lyriaBtn.style.background = 'rgba(255,255,255,0.08)';
     });
 
     // Initialize
