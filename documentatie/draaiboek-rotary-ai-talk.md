@@ -1,6 +1,6 @@
 # 🎤 Draaiboek: AI-talk voor Rotary
 **"De Spiegel" — Van emotie naar urgentie**
-*Totale duur: 60 minuten*
+*Totale duur: 50 minuten*
 
 ---
 
@@ -8,11 +8,9 @@
 
 | # | Onderdeel | Duur | Stijl |
 |---|-----------|------|-------|
-| 1 | Opening: Waarom heeft iedereen een mening? | 10 min | Interactief |
-| 2 | Anthropomorfisme-experiment | 15 min | Stellingenoefening |
-| 3 | Wat AI werkelijk is (en niet is) | 10 min | Uitleg |
-| 4 | Europa's wake-up call: Draghi | 15 min | Data + verhaal |
-| 5 | Call to Action | 8 min | Inspirerend |
+| 1 | Opening + Stellingenoefening | 15 min | Interactief |
+| 2 | Europa's wake-up call: Draghi | 15 min | Data + verhaal |
+| 3 | Call to Action: twee mindset-shifts | 15 min | Demo + verhaal |
 | — | Buffer / vragen | 5 min | — |
 
 ---
@@ -21,7 +19,9 @@
 
 **Wat je nodig hebt:**
 - Laptop + beamer
-- AI Attitudes-tool klaar op de beamer: https://businessdatasolutions.github.io/ai-attitudes/?count=5
+- AI Attitudes-tool klaar op de beamer: https://businessdatasolutions.github.io/ai-attitudes/?count=4
+- Digital Twin Simulatie klaar in browsertab: https://hanbedrijfskunde.github.io/ontology-ivan-baran/ (scroll naar "Ervaar het zelf: de Digital Twin Simulatie")
+- Emergent Strategy tutorial-URL klaar om kort te tonen: https://businessdatasolutions.github.io/emergent-strategy-tutorial/
 - Ruimte in de zaal om links en rechts te gaan staan (stoelen eventueel aan de kant)
 - Tijdsbewaker (telefoon op tafel)
 
@@ -29,8 +29,8 @@
 
 ---
 
-## Segment 1 — Opening: Waarom heeft iedereen een mening?
-### ⏱ 10 minuten
+## Segment 1 — Opening + Stellingenoefening
+### ⏱ 15 minuten
 
 ---
 
@@ -48,21 +48,15 @@ Opnieuw handen. Glimlach.
 
 ---
 
-### 📢 Kernverhaal (5 min)
+### 📢 Kernverhaal (3 min)
 
 Vertel dit in eigen woorden — niet voorlezen:
 
 AI is uniek in de geschiedenis van technologie omdat het **onze zelfopvatting** aanvalt. Elektriciteit verving kaarsen. De auto verving het paard. Maar AI lijkt te vervangen wat we altijd als exclusief menselijk beschouwden: **denken, schrijven, oordelen, creëren.**
 
-Dat verklaart waarom mensen zo fel reageren — zowel enthousiast als angstig. Het gaat niet over technologie. Het gaat over identiteit.
+Dat verklaart waarom mensen zo fel reageren. Het gaat niet over technologie. Het gaat over identiteit.
 
-**Drie patronen die je steeds terugziet:**
-
-- De **Ontkenner** — *"Het stelt niks voor, het hallucineert alleen maar."* (Angst vermomd als rationaliteit)
-- De **Gelovige** — *"AI gaat alles oplossen."* (Hoop vermomd als analyse)
-- De **Parallelist** — *"Het is een tool, net als Excel."* (Comfort vermomd als nuance)
-
-> *"Alle drie hebben ze iets goed — en alle drie missen ze iets. Vanavond zoeken we wat."*
+> *"Alle reacties — van angst tot hoop tot schouderophalen — zijn begrijpelijk. Vanavond zoeken we wat erachter zit."*
 
 ---
 
@@ -72,92 +66,40 @@ Dat verklaart waarom mensen zo fel reageren — zowel enthousiast als angstig. H
 
 ---
 
-## Segment 2 — Het Anthropomorfisme-experiment
-### ⏱ 15 minuten
+### 🧪 Stellingenoefening (7 min)
 
----
-
-### 🧪 Opzet (3 min)
-
-> *"Voordat we verder gaan wil ik u iets laten ervaren. Ik ga u zo vijf stellingen laten zien over AI. Bij elke stelling neemt u letterlijk positie in: bent u het eens, dan gaat u links staan. Oneens? Rechts. Er is geen middenweg — u moet kiezen."*
+> *"Ik ga u zo vier stellingen laten zien over AI. Bij elke stelling neemt u letterlijk positie in: bent u het eens, dan gaat u links staan. Oneens? Rechts. Er is geen middenweg — u moet kiezen."*
 
 Laat iedereen opstaan. Geef de zaal even tijd om te bewegen.
 
 > *"Het gaat niet om het goede antwoord. Het gaat erom dat u merkt wat er gebeurt als u moet kiezen."*
 
-**Tool:** Open op de beamer: [AI Attitudes — Ethische Vragen Generator](https://businessdatasolutions.github.io/ai-attitudes/?count=5)
+**Tool:** Open op de beamer: [AI Attitudes — Ethische Vragen Generator](https://businessdatasolutions.github.io/ai-attitudes/?count=4)
 
-Klik op de kaart om de eerste stelling te tonen.
-
----
-
-### 🚶 De vijf stellingen (9 min)
-
-Toon de stellingen één voor één via de AI Attitudes-tool. Bij elke stelling:
+Toon de stellingen één voor één. Bij elke stelling:
 
 1. **Lees de stelling voor** die op het scherm verschijnt
 2. **Laat deelnemers positie kiezen** — links (eens) of rechts (oneens)
-3. **Vraag 2-3 mensen van beide kanten om een korte toelichting** — "Waarom staat u daar?"
+3. **Vraag 1-2 mensen van beide kanten om een korte toelichting** — "Waarom staat u daar?"
 4. **Klik door** naar de volgende stelling
 
-> 💡 **Tip:** Houd het tempo erin. Maximaal 2 minuten per stelling. Laat het debat niet ontsporen — de waarde zit in het fysiek kiezen, niet in de discussie.
-
-> 💡 **Tip:** Kies bewust wie je vraagt. Wissel af tussen kanten. Vraag ook mensen die twijfelend aan één kant staan.
+> 💡 **Tip:** Houd het tempo erin. Maximaal 1,5 minuut per stelling. Laat het debat niet ontsporen — de waarde zit in het fysiek kiezen, niet in de discussie.
 
 ---
 
-### 🔍 Debriefing (3 min)
+### 🔍 Debriefing + brug (2 min)
 
-Laat iedereen weer zitten. Stel dan de echte vragen:
+Laat iedereen weer zitten.
 
-> *"Wat viel u op? Was het makkelijk om te kiezen — of merkte u dat u twijfelde?"*
+> *"Wat viel u op? Merkte u dat uw keuze niet puur rationeel was? Dat er iets van gevoel in zat?"*
 
-> *"Veranderde uw positie toen u hoorde waarom iemand anders aan de andere kant stond?"*
+> *"Dat is precies het punt. Ons brein is geprogrammeerd om intentie en gevoel te zien — ook waar die er niet is. Wij zien gezichten in wolken. En wij zien 'iemand die begrijpt' in een taalmodel dat patronen herkent. Dit verklaart waarom AI zo emotioneel beladen is."*
 
-> *"Merkte u dat uw keuze niet puur rationeel was? Dat er iets van gevoel in zat — misschien ongemak, of herkenning?"*
-
-**De les die je wilt landen:**
-
-> *"Wat u net ervoer is precies het punt. Onze houding ten opzichte van AI is niet gebaseerd op analyse — het is gebaseerd op iets diepers. Neurologen noemen het anthropomorfisme: het menselijk brein is evolutionair geprogrammeerd om intentie, gevoel en bewustzijn te zien — ook waar die er niet is. Wij zien gezichten in wolken. Wij zien verdriet in een treurige melodie van een instrument. En wij zien 'iemand die begrijpt' in een taalmodel dat patronen herkent."*
-
-> *"Dit is niet dom. Dit is hoe uw brein overleefde. Maar het is wel waarom AI zo emotioneel beladen is — en waarom nuchterheid zo moeilijk is."*
+> *"Nu we dat weten, laten we kijken naar de feiten. Want terwijl wij debatteren over wat AI is, verandert de wereld om ons heen."*
 
 ---
 
-## Segment 3 — Wat AI werkelijk is (en niet is)
-### ⏱ 10 minuten
-
----
-
-### 🧠 De kernuitleg (6 min)
-
-Houd het simpel. Gebruik analogieën, geen jargon.
-
-**Wat AI wél is:**
-
-> *"Een groot taalmodel is een patroonherkenner op industriële schaal. Het heeft miljarden teksten gelezen en geleerd welke woorden op welke woorden volgen — in welke context, met welke nuance. Het voorspelt. Het imiteert. Het is daar buitengewoon goed in."*
-
-**Wat AI níet is:**
-
-> *"Het begrijpt niet. Het gelooft niet. Het heeft geen intentie. Als ChatGPT schrijft 'ik vind dit een interessante vraag' — dan is dat geen mening. Dat is een patroon. In de trainingsdata zeiden mensen dat soort dingen in dat soort situaties."*
-
-**De gevaarlijke combinatie:**
-
-> *"Het probleem is niet dat AI stom is. Het probleem is dat AI nuttig én menselijk-klinkend is tegelijkertijd. En ons brein kan die twee dingen moeilijk van elkaar scheiden — zoals u net zelf ervoer."*
-
----
-
-### ⚡ De snelheidsklap (2 min)
-
-> *"Een laatste gegeven voor we naar Europa kijken. In 1995 duurde het 10 jaar voordat het internet 50 miljoen gebruikers had. Radio deed er 38 jaar over. ChatGPT: 5 dagen."*
-
-Laat dat even landen.
-
-> *"Dit is geen incrementele verandering. Dit is een discontinuïteit. En discontinuïteiten vereisen een ander soort reactie dan optimalisatie."*
-
----
-
-## Segment 4 — Europa's wake-up call: het Draghi-rapport
+## Segment 2 — Europa's wake-up call: het Draghi-rapport
 ### ⏱ 15 minuten
 
 ---
@@ -209,9 +151,9 @@ Laat de video spreken. Zeg niets tijdens het fragment.
 
 **Schrijf dit groot op het scherm of zeg het langzaam:**
 
-> **"Europa heeft een investeringstekort van €800 miljard per jaar ten opzichte van de VS en China."**
+> **"Volgens het Draghi-rapport heeft Europa een extra investering nodig van €750 tot €800 miljard per jaar — dat is zo'n 5% van het Europese bbp."**
 
-> *"Om dat gat te dichten, zou Europa 5% van zijn totale bbp extra moeten investeren — alleen al om bij te blijven. Ter vergelijking: het Marshall Plan na de Tweede Wereldoorlog was 1 tot 2%."*
+> *"Ter vergelijking: het Marshall Plan na de Tweede Wereldoorlog was 1 tot 2% van het Europese bbp. Wat Draghi voorstelt is dus drie tot vijf keer zo groot."*
 
 **De drie kernproblemen die Draghi benoemt:**
 
@@ -238,77 +180,108 @@ Laat de video spreken. Zeg niets tijdens het fragment.
 
 ---
 
-### ❓ Interactief moment (3 min)
-
-> *"Ik wil u iets vragen. Stel uzelf de vraag — niet hardop, gewoon even voor uzelf:"*
-
-Pauze.
-
-> *"In hoeveel procent van de beslissingen in uw organisatie of bedrijf speelt AI op dit moment een rol? Wees eerlijk."*
-
-Laat een paar mensen antwoorden als ze willen.
-
-> *"En in hoeveel procent zou dat kunnen spelen — als u de kennis en de tijd had om het te implementeren?"*
-
-> *"Dat gat — tussen wat is en wat kan — dat is het Draghi-rapport in uw eigen organisatie."*
+## Segment 3 — Call to Action: twee mindset-shifts
+### ⏱ 15 minuten
 
 ---
 
-## Segment 5 — Call to Action
-### ⏱ 8 minuten
+### 🔁 Brug (1 min)
+
+> *"U heeft nu gezien waar Europa staat — en waar het naartoe gaat als we niets veranderen. De vraag is: wat kunt ú doen? Ik geloof dat het begint met twee verschuivingen in hoe we denken."*
 
 ---
 
-### 🔥 De reframe (2 min)
+### 🌱 Mindset-shift 1: Verandercultuur (7 min)
 
-> *"Ik ga u niet vragen om ChatGPT te gebruiken. Ik ga u niet vragen om een AI-strategie te schrijven. Ik ga u niet vragen om uw IT-afdeling te bellen."*
-
-> *"Ik ga u vragen om één vraag te stellen. Aan uzelf. Deze week."*
+**Kernboodschap:** "Het perfecte plan bestaat niet meer. Aanpassingsvermogen is de nieuwe strategie."
 
 ---
 
-### ❓ De centrale vraag (2 min)
+#### Probleemschets (2 min)
 
-**Zeg dit langzaam. Laat het landen:**
+> *"De meeste organisaties — misschien ook de uwe — werken nog volgens het klassieke model: je maakt een visie, een missie, een strategie, en dan voer je uit. Dat werkte toen markten voorspelbaar waren."*
 
-> **"Welk besluit in mijn organisatie zou 10 keer beter worden als ik de juiste informatie op het juiste moment had?"**
-
-> *"Niet: welk probleem kan AI oplossen. Maar: waar betaal ik nu de prijs van onwetendheid, traagheid, of te weinig capaciteit — en waar kan AI die prijs verlagen?"*
-
-> *"Die vraag stellen is het begin. Niet een cursus. Niet een strategie. Die vraag."*
+> *"Maar we leven in wat wetenschappers een VUCA-wereld noemen: volatiel, onzeker, complex en ambigu. In zo'n wereld is uw vijfjarenplan verouderd voordat de inkt droog is."*
 
 ---
 
-### 🤝 Rotary-connectie (2 min)
+#### De omslag (3 min)
 
-> *"Rotary is een netwerk van mensen die iets willen betekenen. Die problemen zien en handelen. U bent niet hier omdat u achterover wilt leunen — u bent hier omdat u vooruit wilt."*
+> *"De bedrijven die het best presteren in deze wereld werken fundamenteel anders. Google, Uber, Spotify — ze hebben geen masterplan. Ze experimenteren continu. Ze lanceren iets, meten wat werkt, en passen aan."*
 
-> *"De organisaties die AI het snelst adopteren zijn niet de grootste. Ze zijn de meest nieuwsgierige. Ze zijn de organisaties waar iemand — misschien in deze zaal — de vraag stelt: wat als we dit anders aanpakken?"*
+> *"Simon Sinek noemt dit 'het oneindige spel'. Het doel is niet winnen — het doel is blijven meespelen. Organisaties die willen 'winnen' optimaliseren op korte termijn. Organisaties die willen meespelen investeren in leervermogen."*
 
-> *"Die persoon bent u. Of u kunt het zijn."*
-
----
-
-### 🚀 De drie stappen (2 min)
-
-Concreet. Uitvoerbaar. Vanavond nog.
-
-**Stap 1 — Vanavond:**
-Ga naar claude.ai of chatgpt.com. Stel één vraag die u normaal aan een collega zou stellen. Kijk wat er uitkomt.
-
-**Stap 2 — Deze week:**
-Deel wat u ervoer met één persoon in uw netwerk. Niet als expert. Als nieuwsgierige.
-
-**Stap 3 — Deze maand:**
-Identificeer één besluit in uw organisatie waarbij betere informatie het verschil maakt. Eén.
-
-> *"Drie stappen. Geen investering. Geen risico. Alleen nieuwsgierigheid."*
+> *"Denk aan een octopus: geen centraal brein dat alles aanstuurt, maar intelligentie verdeeld over het hele lichaam. Elke arm kan autonoom reageren. Dat is het organisatiemodel van de toekomst — niet de hiërarchische machine, maar het adaptieve netwerk."*
 
 ---
 
-### 🎤 Afsluiting (30 sec)
+#### Interactief moment (2 min)
 
-> *"We begonnen vanavond met de vraag waarom iedereen een mening heeft over AI. U weet nu het antwoord: omdat het ons raakt waar het pijn doet en waar het hoopvol maakt — onze identiteit, ons werk, onze toekomst."*
+> *"Even een snelle vraag aan uzelf — niet hardop. Hoeveel van uw strategische beslissingen van het afgelopen jaar waren gepland... en hoeveel waren reacties op iets wat u niet zag aankomen?"*
+
+Laat een paar mensen kort reageren als ze willen.
+
+> *"De organisaties die bloeien zijn niet degenen met het beste plan. Het zijn degenen die het snelst leren."*
+
+**Toon kort op het scherm:** [Emergent Strategy Tutorial](https://businessdatasolutions.github.io/emergent-strategy-tutorial/)
+
+> *"Voor wie hier meer over wil weten: deze tutorial laat u in 20 minuten zien hoe dit werkt. De link komt aan het eind."*
+
+---
+
+### 🚀 Mindset-shift 2: Technologische ambitie (7 min)
+
+**Kernboodschap:** "AI is niet iets wat u 'erbij doet'. Het is een compleet nieuw operationeel model."
+
+---
+
+#### Intro (1 min)
+
+> *"De eerste shift ging over hoe we denken. De tweede gaat over wat er mogelijk is. Want de meeste mensen onderschatten radicaal wat AI vandaag al kan. Niet over vijf jaar. Nu."*
+
+---
+
+#### Live demo: Digital Twin Simulatie (5 min)
+
+> *"Ik wil u iets laten zien. Een simulatie van hoe een volledig AI-gestuurd serviceproces eruitziet. Geen science fiction — dit is technologie die nu beschikbaar is."*
+
+**Tool:** Open op de beamer: [Digital Twin Simulatie](https://hanbedrijfskunde.github.io/ontology-ivan-baran/)
+Scroll naar "Ervaar het zelf: de Digital Twin Simulatie". Klik op **▶ Start Simulatie**.
+
+Loop de stappen door met het publiek. Bij elke stap kort toelichten:
+
+**Stap 1 — Sensordata:**
+> *"Drie sensoren meten temperatuur, snelheid en druk. De temperatuur loopt op naar 192 graden. Kale getallen — zonder context weet niemand of dat een probleem is."*
+
+**Stap 2 — Context toevoegen:**
+> *"Nu koppelt het systeem die getallen aan kennis: welke machine, welk onderdeel, welke klant, welke onderhoudshistorie. Dát maakt data waardevol."*
+
+**Stap 3 — AI-analyse:**
+> *"Het systeem berekent: 82% kans op storing. Niet op basis van één meting, maar op basis van patronen — temperatuurtrend, leeftijd onderdeel, eerdere storingen bij vergelijkbare machines."*
+
+**Stap 4 — Aanbeveling:**
+> *"Preventief onderhoud: vervang het sealmechanisme binnen 10 werkdagen. Geschatte besparing: €8.500 ten opzichte van een ongeplande storing."*
+
+**Stap 5 — Logistiek:**
+> *"Het systeem checkt automatisch het magazijn. Drie onderdelen op voorraad, één moet besteld worden bij de leverancier. Gebeurt automatisch."*
+
+**Stap 6 — Planning:**
+> *"Drie monteurs worden geanalyseerd op certificering, beschikbaarheid en locatie. De beste match wordt geselecteerd."*
+
+**Stap 7 — Klantnotificatie:**
+> *"De klant krijgt automatisch een e-mail: datum, monteur, geschatte duur, welke onderdelen. Alles geregeld."*
+
+Laat de tijdlijn-samenvatting zien.
+
+> *"Van sensordata tot klant-e-mail. Doorlooptijd: 30 seconden. Geen mens nodig. Dát is technologische ambitie."*
+
+---
+
+#### Afsluiting (1 min)
+
+> *"Stel u dit voor in uw eigen sector. In de logistiek. In de zorg. In de maakindustrie. Waar heeft u nu processen die handmatig lopen — terwijl de data er al is?"*
+
+Pauze. Laat het landen.
 
 > *"De vraag is niet meer of AI uw sector gaat veranderen. De vraag is of u degene bent die stuurt — of degene die wordt gestuurd."*
 
@@ -318,16 +291,18 @@ Identificeer één besluit in uw organisatie waarbij betere informatie het versc
 
 ## Speaker Notes — Algemeen
 
-> 💡 **Energiebeheer:** Segment 1 en 2 zijn hoog-energie en interactief. Segment 3 mag rustiger — geef de zaal even om te ademen. Segment 4 bouw je weer op. Segment 5 is kort en krachtig.
+> 💡 **Energiebeheer:** Segment 1 is hoog-energie en interactief (stellingen, bewegen). Segment 2 bouwt urgentie op met data en video — laat de zaal even ademen na de video. Segment 3 brengt het naar een inspirerend slot met een live demo.
 
-> 💡 **Als de oefening uitloopt:** Beperk het aantal toelichtingen per stelling tot 1 per kant. Haal tijd terug in segment 3, niet in segment 4 of 5.
+> 💡 **Als de stellingenoefening uitloopt:** Beperk het aantal toelichtingen per stelling tot 1 per kant. Doe 3 stellingen in plaats van 4. Haal geen tijd weg bij Segment 3 — de demo is de climax.
 
-> 💡 **Als de zaal stil is:** Bij de stellingenoefening is stilte onwaarschijnlijk — het fysiek bewegen activeert. Maar als niemand wil toelichten: wijs iemand aan die duidelijk aan één kant staat. Rotary-leden zijn gewend aan het woord nemen. Ze hebben soms een klein duwtje nodig.
+> 💡 **Als de zaal stil is:** Bij de stellingenoefening is stilte onwaarschijnlijk — het fysiek bewegen activeert. Maar als niemand wil toelichten: wijs iemand aan die duidelijk aan één kant staat.
 
 > 💡 **Als iemand cynisch reageert over AI:** Waardeer het. "Dat is precies de houding die ik bedoel — en het is een gezonde. De vraag is of scepsis genoeg is als concurrenten wél bewegen." Ga niet in debat.
 
-> 💡 **Het Draghi-rapport:** Je hoeft het niet gelezen te hebben. De kernboodschap — €800 miljard, geen grote Europese techbedrijven, fragmentatie — is genoeg. Als iemand doorvraagt: het rapport heet "The future of European competitiveness" en is gratis online.
+> 💡 **Digital Twin demo:** Test de simulatie vooraf. Zorg dat de browsertab al klaartstaat en naar de juiste sectie is gescrold. De simulatie pauzeert na elke stap — dat geeft je tijd om te vertellen.
+
+> 💡 **Het Draghi-rapport:** Je hoeft het niet gelezen te hebben. De kernboodschap — €750-800 miljard per jaar extra investering nodig (~5% bbp), geen grote Europese techbedrijven, fragmentatie — is genoeg. Als iemand doorvraagt: het rapport heet "The future of European competitiveness" en is gratis online.
 
 ---
 
-*Draaiboek versie 1.0 — The Solutions Architect Movement*
+*Draaiboek versie 2.0 — The Solutions Architect Movement*
