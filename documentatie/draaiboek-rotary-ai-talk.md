@@ -40,7 +40,7 @@
 
 Laat handen opsteken. Wacht rustig. Kijk de zaal in.
 
-> *"En wie heeft vandaag een mening gevormd over AI — positief of negatief — zonder het zelf te gebruiken?"*
+> *"En wie herkent dit: u leest iets over AI in de krant, denkt 'interessant' — en bladert verder?"*
 
 Opnieuw handen. Glimlach.
 
