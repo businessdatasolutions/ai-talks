@@ -170,13 +170,13 @@ Laat de video spreken. Zeg niets tijdens het fragment.
 > *"Voor Nederland is dit geen abstract Europees probleem. Kijk naar onze drie sterkste sectoren:"*
 
 **Logistiek (Rotterdam, Schiphol):**
-> *"De haven van Rotterdam verwerkt jaarlijks 14 miljoen containers. Beslissingen over routering, planning en onderhoud worden nog altijd grotendeels handmatig gemaakt. Chinese havens draaien al op volledig geautomatiseerde AI-systemen. Dit is geen toekomst — dit is nu."*
+> *"De haven van Rotterdam verwerkt jaarlijks meer dan 14 miljoen TEU-containers — de grootste buiten Azië. Rotterdam zet al AI in: digital twins, autonome kranen, predictive analytics. Maar Shanghai verwerkt 47 miljoen TEU. De schaalkloof groeit."*
 
 **Zorg:**
-> *"Nederland heeft een tekort van 100.000 zorgmedewerkers in 2030. Dat tekort los je niet op met meer opleidingen. AI-ondersteunde diagnostiek, administratie-automatisering en slimme planning zijn geen luxe meer — het zijn overlevingsvoorwaarden."*
+> *"Nederland heeft een geschat tekort van 105.000 tot 130.000 zorgmedewerkers in 2030. Dat tekort los je niet op met meer opleidingen. AI-ondersteunde diagnostiek, administratie-automatisering en slimme planning zijn geen luxe meer — het zijn overlevingsvoorwaarden."*
 
 **Maakindustrie (ASML, Brainport):**
-> *"We zijn goed. Maar 'goed' is niet genoeg als concurrenten 10x sneller itereren met AI-ondersteunde R&D. ASML begrijpt dit. De vraag is of de 10.000 toeleveranciers rondom Brainport het ook begrijpen."*
+> *"Rondom Brainport zijn zo'n 1.600 MKB-toeleveranciers afhankelijk van ASML. ASML innoveert — maar kan de keten bijblijven? Die toeleveranciers investeren zwaar in cleanrooms en machines, en worstelen met schommelingen in de vraag."*
 
 ---
 
