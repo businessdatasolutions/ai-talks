@@ -14,7 +14,7 @@ All content is written in **Dutch**. When creating or editing documents, maintai
 
 ## Current Content
 
-- `documentatie/draaiboek-rotary-ai-talk.md` — A 60-minute interactive talk script ("De Spiegel — Van emotie naar urgentie") covering AI awareness for a Rotary audience. Structured in 5 segments with speaker notes and timing cues.
+- `documentatie/draaiboek-rotary-ai-talk.md` — A 60-minute interactive talk script ("De Spiegel — Van emotie naar urgentie") covering AI awareness for a Heideheeren audience. Structured in 5 segments with speaker notes and timing cues.
 
 ## Conventions
 

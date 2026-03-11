@@ -1,4 +1,4 @@
-# 🎤 Draaiboek: AI-talk voor Rotary
+# 🎤 Draaiboek: AI-talk voor Heideheeren
 **"De Spiegel" — Van emotie naar urgentie**
 *Totale duur: 50 minuten*
 
